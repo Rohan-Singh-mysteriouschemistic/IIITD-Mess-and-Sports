@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Online - IIIT Delhi</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- <script src="script.js"></script> -->
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://iiitd.ac.in/sites/default/files/style3colorsmall.png" alt="IIIT Delhi" width="200"> <!-- Increased logo size -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mess-coupons.html">Mess Coupons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order-online.html">Canteen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sports-slots.html">Sports</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <div class="dropdown">
+          <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="User" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Order Online</h1>
+
+    <!-- Step 1: Choose Nescafe or Canteen -->
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">Choose Your Option</h2>
+        <div class="text-center">
+          <button id="nescafeBtn" class="btn btn-danger me-3">Order from Nescafe</button>
+          <button id="canteenBtn" class="btn btn-danger">Order from Canteen</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: Nescafe Menu (Hidden by Default) -->
+    <div id="nescafeMenu" class="card shadow mb-4" style="display: none;">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">Nescafe Menu</h2>
+        <ul class="list-group mb-4">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Cappuccino - ₹50
+            <button class="btn btn-sm btn-danger" onclick="addToCart('Cappuccino', 50)">Add to Cart</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Café Mocha - ₹60
+            <button class="btn btn-sm btn-danger" onclick="addToCart('Café Mocha', 60)">Add to Cart</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Choco Delight - ₹70
+            <button class="btn btn-sm btn-danger" onclick="addToCart('Choco Delight', 70)">Add to Cart</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Maggi Cheese - ₹40
+            <button class="btn btn-sm btn-danger" onclick="addToCart('Maggi Cheese', 40)">Add to Cart</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Maggi Masala - ₹30
+            <button class="btn btn-sm btn-danger" onclick="addToCart('Maggi Masala', 30)">Add to Cart</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Step 3: Canteen Menu (Hidden by Default) -->
+    <div id="canteenMenu" class="card shadow mb-4" style="display: none;">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">Canteen Menu</h2>
+        <ul class="list-group mb-4">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Aloo Parantha - ₹40
+            <button class="btn btn-sm btn-danger" onclick="addToCart('Aloo Parantha', 40)">Add to Cart</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Paneer Parantha - ₹50
+            <button class="btn btn-sm btn-danger" onclick="addToCart('Paneer Parantha', 50)">Add to Cart</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Veg Sandwich - ₹30
+            <button class="btn btn-sm btn-danger" onclick="addToCart('Veg Sandwich', 30)">Add to Cart</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Chips - ₹20
+            <button class="btn btn-sm btn-danger" onclick="addToCart('Chips', 20)">Add to Cart</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Cold Drink - ₹30
+            <button class="btn btn-sm btn-danger" onclick="addToCart('Cold Drink', 30)">Add to Cart</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="card shadow">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">Your Cart</h2>
+        <ul id="cartItems" class="list-group mb-4">
+          <!-- Cart items will be added here dynamically -->
+        </ul>
+        <h4 class="text-end">Total: ₹<span id="cartTotal">0</span></h4>
+        <button class="btn btn-danger w-100" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2023 IIIT Delhi. All rights reserved.</p>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

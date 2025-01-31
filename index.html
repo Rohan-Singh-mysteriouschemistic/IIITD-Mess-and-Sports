@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - IIIT Delhi</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<script src="script.js"></script>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://iiitd.ac.in/sites/default/files/style3colorsmall.png" alt="IIIT Delhi" width="200"> <!-- Increased logo size -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mess-coupons.html">Mess Coupons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order-online.html">Canteen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sports-slots.html">Sports</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <div class="dropdown">
+          <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="User" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-overlay"></div> <!-- Semi-transparent overlay -->
+    <div class="text-center">
+      <h1 class="hero-title">Welcome to IIIT Delhi</h1>
+      <p class="hero-subtitle">Your gateway to campus facilities and services.</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Campus Facilities</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="card shadow text-center slide-in-left">
+          <div class="card-body">
+            <h5 class="card-title">Mess Coupons</h5>
+            <p class="card-text">Manage your mess coupons and check availability.</p>
+            <a href="mess-coupons.html" class="btn btn-danger">Go to Mess</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card shadow text-center slide-in-bottom">
+          <div class="card-body">
+            <h5 class="card-title">Canteen</h5>
+            <p class="card-text">Order food online from the canteen.</p>
+            <a href="order-online.html" class="btn btn-danger">Go to Canteen</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card shadow text-center slide-in-right">
+          <div class="card-body">
+            <h5 class="card-title">Sports</h5>
+            <p class="card-text">Book sports slots and check availability.</p>
+            <a href="sports-slots.html" class="btn btn-danger">Go to Sports</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS for Animations -->
+  <script src="script.js"></script>
+</body>
+</html>
